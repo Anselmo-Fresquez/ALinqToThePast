@@ -8,6 +8,8 @@ namespace Grades {
             GradeBook GradeBook = new GradeBook();
             Random Random = new Random();
 
+            GradeBook.Name = "John Doe";
+
             for (int i = 0; i < 6; i++) {
                 GradeBook.AddGrade(Random.Next(75, 100));
             }
@@ -18,6 +20,7 @@ namespace Grades {
                 Console.WriteLine(grade);
             }
 
+            Console.WriteLine(GradeBook.Name);
             Console.WriteLine("Average grade:" + GradeBook.AverageGrade());
             Console.WriteLine("Highest grade:" + GradeBook.HighestGrade());
             Console.WriteLine("Lowest grade:" + GradeBook.LowestGrade());

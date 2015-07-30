@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace Grades {
     class GradeBook {
-        List<float> Grades = new List<float>();
+        public string       Name;
+        private List<float> Grades = new List<float>();
 
         public void AddGrade (float grade) {
             Grades.Add(grade);
