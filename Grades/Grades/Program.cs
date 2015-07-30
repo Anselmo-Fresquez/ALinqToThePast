@@ -6,43 +6,56 @@ using System.IO;
 namespace Grades {
     class Program {
         static void Main (string[] args) {
-            GradeBook GradeBook = new GradeBook();
-            FileStream   stream = null;
-            StreamReader reader = null;
+            GradeBook GradeBook     = new GradeBook();
+            StreamReader reader     = null;
+            bool Done               = false;
+            int MaxNumberOfAttempts = 5;
+            int NumberOfAttempts    = 0;
 
-            try {
-                stream = File.Open("grades.txt", FileMode.Open);
-                reader = new StreamReader(stream);
+            while (!Done) {
+                Console.WriteLine("Please enter name of file containing student grades.");
 
-                string line = reader.ReadLine();
-                while (line != null) {
-                    float grade = float.Parse(line);
-                    GradeBook.AddGrade(grade);
-                    line = reader.ReadLine();
+                try {
+                    using (FileStream stream = File.Open(Console.ReadLine(), FileMode.Open)) {
+                        reader = new StreamReader(stream);
+                        string line = reader.ReadLine();
+
+                        while (line != null) {
+                            float grade = float.Parse(line);
+                            GradeBook.AddGrade(grade);
+                            line = reader.ReadLine();
+                        }
+
+                        Console.WriteLine("Student's grades:");
+
+                        foreach (float grade in GradeBook.GetGrades()) {
+                            Console.WriteLine(grade);
+                        }
+
+                        Console.WriteLine(GradeBook.Name);
+                        Console.WriteLine("Average grade:" + GradeBook.LetterGrade + " (" + GradeBook.AverageGrade() +")");
+                        Console.WriteLine("Highest grade:" + GradeBook.HighestGrade());
+                        Console.WriteLine("Lowest grade:" + GradeBook.LowestGrade());
+
+                        Done = true;
+                    }
+                } catch (DirectoryNotFoundException ex) {
+                    Console.WriteLine("Invalid entry, please try again.");
+                } catch (ArgumentException ex) {
+                    Console.WriteLine("Invalid entry, please try again.");
+                } catch (FileNotFoundException ex) {
+                    Console.WriteLine("Could not find the file grades.txt");
+                } catch (UnauthorizedAccessException ex) {
+                    Console.WriteLine("You do not have access to grades.txt");
                 }
-            } catch (FileNotFoundException ex) {
-                Console.WriteLine("Could not find the file grades.txt");
-            } catch (UnauthorizedAccessException ex) {
-                Console.WriteLine("You do not have access to grades.txt");
-            } finally {
-                if (reader != null) {
-                    reader.Close();
+
+                NumberOfAttempts++;
+                if (NumberOfAttempts > MaxNumberOfAttempts) {
+                    Console.WriteLine("Max number of attempts exceeded, exiting.");
+                    Done = true;
                 }
-                if (stream != null) {
-                    stream.Close();
-                }
+                
             }
-
-            Console.WriteLine("Student's grades:");
-
-            foreach (float grade in GradeBook.GetGrades()) {
-                Console.WriteLine(grade);
-            }
-
-            Console.WriteLine(GradeBook.Name);
-            Console.WriteLine("Average grade:" + GradeBook.AverageGrade() + GradeBook.LetterGrade);
-            Console.WriteLine("Highest grade:" + GradeBook.HighestGrade());
-            Console.WriteLine("Lowest grade:" + GradeBook.LowestGrade());
 
             Console.Read();
         }
