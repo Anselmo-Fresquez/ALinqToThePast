@@ -7,7 +7,6 @@ namespace Grades {
     class Program {
         static void Main (string[] args) {
             GradeBook GradeBook     = new GradeBook();
-            StreamReader reader     = null;
             bool Done               = false;
             int MaxNumberOfAttempts = 5;
             int NumberOfAttempts    = 0;
@@ -16,8 +15,8 @@ namespace Grades {
                 Console.WriteLine("Please enter name of file containing student grades.");
 
                 try {
-                    using (FileStream stream = File.Open(Console.ReadLine(), FileMode.Open)) {
-                        reader = new StreamReader(stream);
+                    using (FileStream stream = File.Open(Console.ReadLine(), FileMode.Open))
+                    using (StreamReader reader = new StreamReader(stream)) {
                         string line = reader.ReadLine();
 
                         while (line != null) {
