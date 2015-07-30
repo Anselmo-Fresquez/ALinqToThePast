@@ -6,6 +6,25 @@ namespace Grades {
         public string       Name;
         private List<float> Grades = new List<float>();
 
+        public string LetterGrade {
+            get {
+                float averageGrade = AverageGrade();
+
+                if (averageGrade >= 90) {
+                    return "A";
+                } else if (averageGrade >= 80) {
+                    return "B";
+                } else if (averageGrade >= 70) {
+                    return "C";
+                } else if (averageGrade >= 60) {
+                    return "D";
+                } else {
+                    return "F";
+                }
+            }
+            private set { }
+        }
+
         public void AddGrade (float grade) {
             Grades.Add(grade);
         }
@@ -42,15 +61,6 @@ namespace Grades {
             }
 
             return lowestGrade;
-        }
-
-        public float PointScale () {
-            float pointScale = 0;
-            float averageGrade = AverageGrade();
-
-            pointScale = averageGrade / 22.5f;
-
-            return Math.Min(pointScale, 4.0f);
         }
 
         public List<float> GetGrades () {
