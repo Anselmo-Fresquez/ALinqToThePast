@@ -7,16 +7,30 @@ namespace Grades {
     class Program {
         static void Main (string[] args) {
             GradeBook GradeBook = new GradeBook();
+            FileStream   stream = null;
+            StreamReader reader = null;
 
             try {
-                string[] lines = File.ReadAllLines("grades.txt");
+                stream = File.Open("grades.txt", FileMode.Open);
+                reader = new StreamReader(stream);
 
-                foreach (string line in lines) {
+                string line = reader.ReadLine();
+                while (line != null) {
                     float grade = float.Parse(line);
                     GradeBook.AddGrade(grade);
+                    line = reader.ReadLine();
                 }
             } catch (FileNotFoundException ex) {
                 Console.WriteLine("Could not find the file grades.txt");
+            } catch (UnauthorizedAccessException ex) {
+                Console.WriteLine("You do not have access to grades.txt");
+            } finally {
+                if (reader != null) {
+                    reader.Close();
+                }
+                if (stream != null) {
+                    stream.Close();
+                }
             }
 
             Console.WriteLine("Student's grades:");
