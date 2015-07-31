@@ -1,0 +1,7 @@
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Testing123\bin\Debug\Testing123.dll
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Testing123\bin\Debug\Testing123.pdb
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Testing123\bin\Debug\ALinqToThePast.exe
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Testing123\bin\Debug\ALinqToThePast.pdb
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Testing123\obj\Debug\Testing123.csprojResolveAssemblyReference.cache
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Testing123\obj\Debug\Testing123.dll
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Testing123\obj\Debug\Testing123.pdb
