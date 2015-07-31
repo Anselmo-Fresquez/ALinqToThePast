@@ -75,8 +75,13 @@ namespace ALinqToThePast {
             };
         }
 
-        public IEnumerable<Customer> SortByName (List<Customer> customerList) {
-            return customerList.OrderBy(c => c.LastName).ThenBy(c => c.FirstName);
+        public IEnumerable<Customer> SortByName (List<Customer> customerList, bool reverse) {
+            IEnumerable<Customer> result = null;
+
+            result = customerList.OrderBy(c => c.LastName).ThenBy(c => c.FirstName);
+            result = reverse ? result.Reverse() : result;
+
+            return result;
         }
     }
 }
