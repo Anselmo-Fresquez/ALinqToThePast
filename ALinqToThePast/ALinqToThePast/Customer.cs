@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ALinqToThePast {
-    class Customer {
+    public class Customer {
         public int      CustomerId      { get; set; }
         public string   FirstName       { get; set; }
         public string   LastName        { get; set; }

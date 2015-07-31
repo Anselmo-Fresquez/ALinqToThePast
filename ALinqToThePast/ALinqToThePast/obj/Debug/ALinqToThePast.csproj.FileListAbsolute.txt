@@ -1,1 +1,6 @@
 c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\ALinqToThePast\bin\Debug\ALinqToThePast.exe.config
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\ALinqToThePast\bin\Debug\ALinqToThePast.exe
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\ALinqToThePast\bin\Debug\ALinqToThePast.pdb
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\ALinqToThePast\obj\Debug\ALinqToThePast.exe
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\ALinqToThePast\obj\Debug\ALinqToThePast.pdb
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\ALinqToThePast\obj\Debug\ALinqToThePast.csprojResolveAssemblyReference.cache
