@@ -10,6 +10,7 @@ namespace ALinqToThePast {
         public Customer Find (List<Customer> customerList, int customerId) {
             Customer foundCustomer = null;
           
+            // Iteration method
             //foreach (var customer in customerList) {
             //    if (customer.CustomerId == customerId) {
             //        foundCustomer = customer;
@@ -17,12 +18,15 @@ namespace ALinqToThePast {
             //    }
             //}
 
+            // Link Query, deferred execution
             //var query = from customer in customerList
             //            where customer.CustomerId == customerId
             //            select customer;
 
+            // execute
             //foundCustomer = query.First();
 
+            // Linq Method Syntax, anonymous inline function
             //foundCustomer = customerList.FirstOrDefault(c => c.CustomerId == customerId);
 
             //foundCustomer = customerList.FirstOrDefault(c => {
@@ -31,10 +35,9 @@ namespace ALinqToThePast {
             //});
 
 
-            //Transversal operation
+            //Transversal operation with chaining
             foundCustomer = customerList.Where(c => c.CustomerId == customerId)
-                                .Skip(0)
-                                .FirstOrDefault();
+                .FirstOrDefault();
 
             return foundCustomer;
         }
@@ -70,6 +73,10 @@ namespace ALinqToThePast {
                     CustomerTypeId  = 2
                 }
             };
+        }
+
+        public IEnumerable<Customer> SortByName (List<Customer> customerList) {
+            return customerList.OrderBy(c => c.LastName).ThenBy(c => c.FirstName);
         }
     }
 }
