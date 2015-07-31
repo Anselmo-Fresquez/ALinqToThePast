@@ -1,0 +1,1 @@
+c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\ALinqToThePast\bin\Debug\ALinqToThePast.exe.config

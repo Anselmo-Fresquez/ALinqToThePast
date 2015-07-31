@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALinqToThePast", "ALinqToThePast\ALinqToThePast.csproj", "{C660CBD2-9556-4A11-ACDA-8A500D3E939E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing123", "Testing123\Testing123.csproj", "{0F4D1927-CFC9-4488-B001-9E7F06F2C156}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C660CBD2-9556-4A11-ACDA-8A500D3E939E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C660CBD2-9556-4A11-ACDA-8A500D3E939E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C660CBD2-9556-4A11-ACDA-8A500D3E939E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C660CBD2-9556-4A11-ACDA-8A500D3E939E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F4D1927-CFC9-4488-B001-9E7F06F2C156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F4D1927-CFC9-4488-B001-9E7F06F2C156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F4D1927-CFC9-4488-B001-9E7F06F2C156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F4D1927-CFC9-4488-B001-9E7F06F2C156}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
