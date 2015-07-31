@@ -49,5 +49,17 @@ namespace Library {
             Assert.IsTrue(Math.Abs(randomNumbers.Average() - 50) < 5);
             TestContext.WriteLine(randomNumbers.Average().ToString());
         }
+
+        [TestMethod]
+        public void TestRepeater () {
+            Builder builder = new Builder();
+
+            var repeatedSequence = builder.BuildRepeatingNumber(1, 5);
+
+            foreach (var n in repeatedSequence) {
+                Assert.AreEqual(n, 1);
+                TestContext.WriteLine(n.ToString());
+            }
+        }
     }
 }

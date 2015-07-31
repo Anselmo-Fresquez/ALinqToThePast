@@ -26,5 +26,9 @@ namespace Library {
 
             return integers;
         }
+
+        public IEnumerable<int> BuildRepeatingNumber (int number, int quantity) {
+            return Enumerable.Repeat(number, quantity);
+        }
     }
 }
