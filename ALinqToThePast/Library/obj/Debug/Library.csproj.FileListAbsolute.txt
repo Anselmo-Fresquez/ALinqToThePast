@@ -2,4 +2,3 @@ c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\L
 c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Library\bin\Debug\Library.pdb
 c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Library\obj\Debug\Library.dll
 c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Library\obj\Debug\Library.pdb
-c:\users\anselmo fresquez\documents\visual studio 2013\Projects\ALinqToThePast\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache

@@ -32,5 +32,19 @@ namespace Testing123 {
             Assert.AreEqual(result.First().LastName, "Baggins");
         }
 
+        [TestMethod]
+        public void TestGetNamesEmail () {
+            CustomerRepository testRepo = new CustomerRepository();
+            testRepo.GetNamesAndEmail(testRepo.Retrieve());
+        }
+
+        [TestMethod]
+        public void TestGetNamesTypes () {
+            CustomerRepository testRepo = new CustomerRepository();
+            CustomerTypeRepository typeRepo = new CustomerTypeRepository();
+
+            testRepo.GetNamesAndType(testRepo.Retrieve(),
+                typeRepo.Retrieve());
+        }
     }
 }
